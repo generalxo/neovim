@@ -21,7 +21,7 @@ opt.smartcase = true
 -- Background
 opt.termguicolors = true
 opt.background = "dark"
-opt.signcolumn = "yes"
+opt.signcolumn = "no"
 
 -- Backspace
 opt.backspace = "indent,eol,start" -- allow backspace in indent
@@ -35,5 +35,16 @@ opt.splitbelow = true
 
 -- Scroll
 opt.scrolloff = 8
-opt.signcolumn = "yes"
+opt.signcolumn = "no"
 
+-- Default Status Line
+opt.showmode = false
+
+-- Cursor Settings
+opt.guicursor = "n-v-ve:block,i-ci-ve:ver20"
+
+-- termguicolors
+opt.termguicolors = true
+
+-- Notify
+vim.notify = require("notify")

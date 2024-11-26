@@ -1,4 +1,6 @@
 require("config.after.harpoon")
+require("config.after.treesitter")
 require("config.after.lsp-zero")
 require("config.after.dap")
-
+require("config.after.alpha")
+require("config.after.colorize")
