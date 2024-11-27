@@ -57,17 +57,15 @@ local function centerText(quote, width)
 	local response = {}
 	for _, text in ipairs(quote) do
 		local whitespaceMax = (width - string.len(text))
-		local spaces = "" 
-		local sentence = "" 
+		local spaces = whitespaceMax / 2
+		local sentence = ""
 		if whitespaceMax % 2 == 0 then
-			spaces = whitespaceMax / 2
 			sentence = string.rep(" ", spaces) .. text .. string.rep(" ", spaces)
 		else
-			spaces = whitespaceMax / 2
 			sentence = string.rep(" ", spaces + 1) .. text .. string.rep(" ", spaces)
 		end
 		table.insert(response, sentence)
-		spaces = ""
+		spaces = 0
 		sentence = ""
 		whitespaceMax = 0
 	end
