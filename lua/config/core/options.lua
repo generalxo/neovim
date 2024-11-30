@@ -35,7 +35,7 @@ opt.splitbelow = true
 
 -- Scroll
 opt.scrolloff = 8
-opt.signcolumn = "no"
+opt.signcolumn = "yes"
 
 -- Default Status Line
 opt.showmode = false
@@ -43,8 +43,12 @@ opt.showmode = false
 -- Cursor Settings
 opt.guicursor = "n-v-ve:block,i-ci-ve:ver20"
 
--- termguicolors
+-- Termguicolors
 opt.termguicolors = true
 
 -- Notify
 vim.notify = require("notify")
+
+-- Statusline
+opt.laststatus = 3
+

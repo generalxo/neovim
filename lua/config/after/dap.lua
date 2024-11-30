@@ -20,20 +20,20 @@ dap.adapters.coreclr = {
 -- Configurations
 dap.configurations.cs = {
   {
-    type = "coreclr",
+    type = "coreclr", --this should correspond to dap.adapters.{name} <--
     name = "launch - netcoredbg",
-    request = "launch",
-    program = function()
+    request = "launch", -- action taken.
+    program = function() -- the path to the application dll.
         return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
     end,
-	env = {
+	env = { -- enviorment variables/options
 		ASPNETCORE_URLS = function()
 			return "https://localhost:7163"
 		end
 	},
   },
 }
-
+--7163
 
 dapui.setup()
 
