@@ -12,26 +12,27 @@ vim.keymap.set('n', '<s-F1>', dap.terminate)
 -- Debugges / adapters
 -- Csharp
 dap.adapters.coreclr = {
-  type = 'executable',
-  command = 'C:\\Users\\Oliver\\AppData\\Local\\nvim-data\\mason\\packages\\netcoredbg\\netcoredbg\\netcoredbg.exe',
-  args = {'--interpreter=vscode'}
+	type = 'executable',
+	command = 'C:\\Users\\Oliver\\AppData\\Local\\nvim-data\\mason\\packages\\netcoredbg\\netcoredbg\\netcoredbg.exe',
+	args = {'--interpreter=vscode'}
 }
 
 -- Configurations
 dap.configurations.cs = {
-  {
-    type = "coreclr", --this should correspond to dap.adapters.{name} <--
-    name = "launch - netcoredbg",
-    request = "launch", -- action taken.
-    program = function() -- the path to the application dll.
-        return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
-    end,
-	env = { -- enviorment variables/options
-		ASPNETCORE_URLS = function()
-			return "https://localhost:7163"
-		end
+	{
+		type = "coreclr", --this should correspond to dap.adapters.{name} <--
+		name = "launch - netcoredbg",
+		request = "launch", -- action taken.
+		--program = function() -- the path to the application dll.
+		--	return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
+		--end,
+		program = [[C:\code\adventofcode\Advent-of-code-2024\bin\Debug\net9.0\Advent-of-code.dll]],
+	--	env = { -- enviorment variables/options
+	--		ASPNETCORE_URLS = function()
+	--			return "https://localhost:7163"
+	--		end
+	--	},
 	},
-  },
 }
 --7163
 
