@@ -26,15 +26,15 @@ dap.configurations.cs = {
 		--program = function() -- the path to the application dll.
 		--	return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
 		--end,
-		program = [[C:\code\adventofcode\Advent-of-code-2024\bin\Debug\net9.0\Advent-of-code.dll]],
-	--	env = { -- enviorment variables/options
-	--		ASPNETCORE_URLS = function()
-	--			return "https://localhost:7163"
-	--		end
-	--	},
+		program = [[C:\code\personal\flash-card-webbapp\flash-card-webbapp.Server\bin\Debug\net8.0\flash-card-webbapp.Server.dll]],
+		env = {
+			-- enviorment variables/options
+			ASPNETCORE_URLS = function()
+				return "https://localhost:7163"
+			end
+		},
 	},
 }
---7163
 
 dapui.setup()
 

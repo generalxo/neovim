@@ -15,6 +15,26 @@ local quotes = {
 		[[ The point is to understand ]],
 		[[ ⠶ Albert Einstein ⠶ ]],
 	},
+	{
+		[[ Know that you don't know ]],
+		[[ That is superior ]],
+		[[ ⠶ Lao Tzu ⠶ ]],
+	},
+	{
+		[[ The beginning of knowledge is the discovery ]],
+		[[ of something we do not understand ]],
+		[[ ⠶ Frank Herbert ⠶ ]],
+	},
+	{
+		[[ Real knowledge is to know the ]],
+		[[ extent of one's ignorance ]],
+		[[ ⠶ Confucius ⠶ ]],
+	},
+	{
+		[[ Any fool can know ]],
+		[[ The point is to understand ]],
+		[[ ⠶ Albert Einstein ⠶ ]],
+	},
 }
 
 local test = {
