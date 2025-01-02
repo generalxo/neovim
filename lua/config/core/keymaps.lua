@@ -21,6 +21,7 @@ keymap.set('n', '<leader>tf', '<cmn>tabnew %<CR>', {desc = "open current buffer 
 
 -- Toggle Term
 keymap.set('n', '<leader>termn','<cmd>ToggleTerm direction=tab<CR>', {desc = "Create new ToggleTerm in new tab"})
+keymap.set('n', '<leader>termss', '<cmd>ToggleTerm direction=vertical<CR>', {desc = "Create new term vertical"})
 
 -- Telescope
 keymap.set('n','<leader>fr', '<cmd>Telescope oldfiles<CR>', {desc = "Fuzzy find recent files"})
