@@ -7,7 +7,11 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 -- Setup Mason and Mason LSPConfig
-require('mason').setup({})
+require('mason').setup({
+	ensure_installed = {
+		'prettier',
+	},
+})
 require('mason-lspconfig').setup({
 	ensure_installed = {
 		'rust_analyzer',
