@@ -4,6 +4,7 @@ local s = ls.snippet
 local i = ls.insert_node
 
 local fmta = require("luasnip.extras.fmt").fmta
+local fmt = require("luasnip.extras.fmt").fmt
 
 -- Csharp Snippets
 -- Thank you who ever you are that was some greate insperation
@@ -22,4 +23,30 @@ ls.add_snippets("cs", {
 	s("if", fmta("if(<>)" .. "\n" .. "{" .. "\n" .. "<>" .. "\n" .. "}",
 		{ i(1), i(0) }
 	)),
+})
+
+ls.add_snippets("php", {
+    s("!", fmt([[
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+	{}
+</body>
+</html>
+]], {
+        i(1),
+    })),
+	s("php", fmt([[
+<?php
+	{}
+?>
+]], {
+		i(1),
+	})),
 })
