@@ -1,8 +1,13 @@
+local startify = require("alpha.themes.startify")
+startify.file_icons.provider = "devicons"
+require("alpha").setup(startify.config)
+
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
 local quotes = {
-	{	[[ Thinking: the talking of the soul with itself ]],
+	{
+		[[ Thinking: the talking of the soul with itself ]],
 		[[ ⠶ Plato ⠶ ]],
 	},
 	{
@@ -92,15 +97,12 @@ local function centerText(quote, width)
 	return response
 end
 
-
-
 local function createHeader(quote, art)
-
 	local data = centerText(quote, 80)
 	--local data = {}
---	for _, val in ipairs(quote) do
---		table.insert(data, val)
---	end
+	--	for _, val in ipairs(quote) do
+	--		table.insert(data, val)
+	--	end
 	for _, val in ipairs(art) do
 		table.insert(data, val)
 	end
@@ -113,9 +115,9 @@ local header = createHeader(quotes[math.random(#quotes)], test)
 dashboard.section.header.val = header
 
 dashboard.section.buttons.val = {
-	dashboard.button( "r", "  > Recent", ":Telescope oldfiles<CR>"),
-	dashboard.button( "d", "󰉋  > Directory", ":DirMenu<CR>"),
-	dashboard.button( "q", "󰈆  > Quit NVIM", ":qa<CR>"),
+	dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
+	dashboard.button("d", "󰉋  > Directory", ":DirMenu<CR>"),
+	dashboard.button("q", "󰈆  > Quit NVIM", ":qa<CR>"),
 }
 
 alpha.setup(dashboard.opts)

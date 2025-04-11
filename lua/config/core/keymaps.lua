@@ -18,8 +18,3 @@ keymap.set('n', '<leader>tq', '<cmd>tabclose<CR>', {desc = "cloes tab"})
 keymap.set('n', '<leader>tn', '<cmd>tabn<CR>', {desc = "go to next tab"})
 keymap.set('n', '<leader>tp', '<cmd>tabp<CR>', {desc = "go to previous"})
 keymap.set('n', '<leader>tf', '<cmn>tabnew %<CR>', {desc = "open current buffer in new tab"})
-
--- Telescope
---keymap.set('n','<leader>findrecent', '<cmd>Telescope oldfiles<CR>', {desc = "Fuzzy find recent files"})
---keymap.set('n', '<leader>findbuffer', '<cmd>Telescope current_buffer_fuzzy_find<CR>', {desc = "Fuzzy find current buffer"})
---keymap.set('n', '<leader>findgrep', '<cmd>Telescope live_grep<CR>', {desc = "Fuzzy find live grep"})

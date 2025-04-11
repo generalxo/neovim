@@ -4,13 +4,9 @@ vim.o.shellslash = true
 vim.g.dll_path = nil
 
 local opt = vim.opt
--- Shell
+
 opt.shell = "powershell"
-opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
-opt.shellquote = "\""
-opt.shellxquote = ""
 
 require("config.lazy")
 require("config.after")
 require("config.core")
-require("config.custom")
