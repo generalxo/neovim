@@ -47,8 +47,7 @@ opt.guicursor = "n-v-ve:block,i-ci-ve:ver20"
 opt.termguicolors = true
 
 -- Notify
---vim.notify = require("notify")
+vim.notify = require("notify")
 
 -- Statusline
 opt.laststatus = 3
-

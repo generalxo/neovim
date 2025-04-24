@@ -36,13 +36,19 @@ return {
 		opts = {
 			keymap = { preset = "default" },
 			appearance = {
-				nerd_font_variant = "mono",
+				nerd_font_variant = "normal",
 			},
 			snippets = {
 				preset = "luasnip",
 			},
 			completion = {
 				documentation = { auto_show = false },
+				list = {
+					selection = {
+						preselect = false,
+						auto_insert = false,
+					},
+				},
 				menu = {
 					draw = {
 						columns = {
@@ -50,6 +56,9 @@ return {
 							{ "kind_icon", "kind", "source_name", gap = 1 },
 						},
 					},
+				},
+				ghost_text = {
+					enabled = true,
 				},
 			},
 			sources = {
