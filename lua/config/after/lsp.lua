@@ -15,4 +15,14 @@ lspconfig.tailwindcss.setup({
 	filetypes = { "html", "blade", "php" },
 })
 
+--lspconfig.phpactor.setup({
+--	capabilities = capabilities,
+--	filetypes = { "php" },
+--})
+
+lspconfig.intelephense.setup({
+	capabilities = capabilities,
+	filetypes = { "php" },
+})
+
 vim.diagnostic.config({ virtual_text = true })

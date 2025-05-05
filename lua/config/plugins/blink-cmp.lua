@@ -1,5 +1,4 @@
 return {
-	-- blink.compat, required to proxy to nvim-cmp sources
 	{
 		"saghen/blink.compat",
 		version = "*",
@@ -7,7 +6,6 @@ return {
 		opts = {},
 	},
 
-	-- blade-nav as a completion source for cmp
 	{
 		"ricardoramirezr/blade-nav.nvim",
 		--dependencies = { "hrsh7th/nvim-cmp" },
@@ -20,7 +18,6 @@ return {
 		end,
 	},
 
-	-- your blink.cmp config with blade-nav added
 	{
 		"saghen/blink.cmp",
 		version = "1.*",
