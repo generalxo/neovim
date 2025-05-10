@@ -5,19 +5,6 @@ return {
 		lazy = true,
 		opts = {},
 	},
-
-	{
-		"ricardoramirezr/blade-nav.nvim",
-		--dependencies = { "hrsh7th/nvim-cmp" },
-		ft = { "blade", "php" },
-		opts = {
-			close_tag_on_complete = true,
-		},
-		config = function()
-			require("blade-nav").setup({})
-		end,
-	},
-
 	{
 		"saghen/blink.cmp",
 		version = "1.*",
@@ -26,10 +13,8 @@ return {
 			"onsails/lspkind.nvim",
 			"saghen/blink.compat",
 			"mikavilpas/blink-ripgrep.nvim",
-			"ricardoramirezr/blade-nav.nvim",
 			{ "L3MON4D3/LuaSnip", version = "v2.*" },
 		},
-
 		opts = {
 			keymap = { preset = "default" },
 			appearance = {
@@ -73,9 +58,10 @@ return {
 						name = "Ripgrep",
 					},
 					["blade-nav"] = {
-						name = "blade-nav",
-						module = "blink.compat.source",
-						opts = {},
+						module = "blade-nav.blink",
+						opts = {
+							close_tag_on_complete = false,
+						},
 					},
 				},
 			},
