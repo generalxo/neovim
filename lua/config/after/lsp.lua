@@ -25,4 +25,9 @@ lspconfig.intelephense.setup({
 	filetypes = { "php" },
 })
 
+lspconfig.pylyzer.setup({
+	capabilities = capabilities,
+	filetypes = { "py" },
+})
+
 vim.diagnostic.config({ virtual_text = true })
