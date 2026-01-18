@@ -37,7 +37,7 @@ local function createAndMountMenu()
 		end,
 		on_submit = function(item)
 			vim.cmd("enew")
-			vim.cmd("cd " .. item.path)
+			--vim.cmd("cd " .. item.path)
 			vim.cmd("Oil " .. item.path)
 			vim.notify("Opened " .. item.path .. " in Oil", nil, { title = dirMenuName })
 		end,

@@ -20,3 +20,6 @@
 - G -> will go to the last line of a file
 - fx -> will go to the next ocurrence of x in a line
 - Fx -> will go to the previous ocurrence of x in a line
+
+### Manipulation
+- in visual mode: gc -> will comment selected text

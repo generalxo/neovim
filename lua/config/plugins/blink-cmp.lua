@@ -16,7 +16,10 @@ return {
 			{ "L3MON4D3/LuaSnip", version = "v2.*" },
 		},
 		opts = {
-			keymap = { preset = "default" },
+			keymap = {
+				preset = "default",
+				["<Tab>"] = { "select_and_accept" },
+			},
 			appearance = {
 				nerd_font_variant = "normal",
 			},

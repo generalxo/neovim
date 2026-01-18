@@ -1,33 +1,13 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
-local lspconfig = require("lspconfig")
 
-local capabilities = require("blink.cmp").get_lsp_capabilities()
-lspconfig.lua_ls.setup({ capabilities = capabilities })
+local capabilities = require("blink-cmp").get_lsp_capabilities()
 
-lspconfig.emmet_ls.setup({
+vim.lsp.config("*", {
 	capabilities = capabilities,
-	filetypes = { "html", "blade" },
+	root_markers = { ".git" },
 })
 
-lspconfig.tailwindcss.setup({
-	capabilities = capabilities,
-	filetypes = { "html", "blade", "php" },
-})
-
---lspconfig.phpactor.setup({
---	capabilities = capabilities,
---	filetypes = { "php" },
---})
-
-lspconfig.intelephense.setup({
-	capabilities = capabilities,
-	filetypes = { "php" },
-})
-
-lspconfig.pylyzer.setup({
-	capabilities = capabilities,
-	filetypes = { "py" },
-})
+vim.lsp.enable({ "lua_ls", "emmet_ls", "tailwindcss", "ts_ls", "pylyzer", "clangd" })
 
 vim.diagnostic.config({ virtual_text = true })

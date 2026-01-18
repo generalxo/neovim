@@ -21,3 +21,6 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "open current buffer
 
 -- Remove search
 keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "remove search highlight" })
+
+-- Dont yank on paste
+keymap.set("x", "p", '"_dP', { noremap = true, silent = true })
