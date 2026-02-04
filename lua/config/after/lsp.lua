@@ -8,6 +8,14 @@ vim.lsp.config("*", {
 	root_markers = { ".git" },
 })
 
-vim.lsp.enable({ "lua_ls", "emmet_ls", "tailwindcss", "ts_ls", "pylyzer", "clangd" })
+vim.lsp.enable({
+	"lua_ls",
+	"emmet_ls",
+	"tailwindcss",
+	"ts_ls",
+	"pylyzer",
+	"clangd",
+	"gopls",
+})
 
 vim.diagnostic.config({ virtual_text = true })
