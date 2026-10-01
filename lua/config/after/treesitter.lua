@@ -11,6 +11,9 @@ require("nvim-treesitter.configs").setup({
 		"c_sharp",
 		"html",
 		"php",
+		"php_only",
+		"blade",
+		"vue",
 	},
 
 	sync_install = false,
@@ -24,4 +27,4 @@ require("nvim-treesitter.configs").setup({
 		additional_vim_regex_highlighting = false,
 	},
 })
-require("nvim-treesitter.install").compilers = { "clang" }
+require("nvim-treesitter.install").compilers = { "gcc" }

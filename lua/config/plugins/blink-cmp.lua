@@ -58,10 +58,8 @@ return {
 						name = "Ripgrep",
 					},
 					["blade-nav"] = {
-						module = "blade-nav.blink",
-						opts = {
-							close_tag_on_complete = false,
-						},
+						name = "blade-nav",
+						module = "blade-nav.integrations.blink",
 					},
 				},
 			},
